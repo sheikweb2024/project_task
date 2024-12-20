@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    body{
+      width: 100vw;
+      min-height: 100vh;
+      background: url(images/favicon-32x32.png);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container{
+      background-color: hsl(185, 75%, 39%);
+      max-width: 1440px;
+      width: 100%;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container > img:first-child{
+      position: absolute;
+      left: -20rem;
+      top: -35rem;
+    }
+
+    .container > img:nth-last-child(1){
+      position: absolute;
+      right: -20rem;
+      bottom: -37rem;
+    }
+
+    .profile{
+      border-radius: 10px;
+      background-color: white;
+      width: 300px;
+      min-height: 340px;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .center{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+      margin-top: 15px;
+      padding: 10px 20px;
+    }
+
+    .center p{
+      color: rgba(128, 128, 128, 0.686);
+    }
+    .pic{
+      width: 96px;
+      height: 96px;
+      overflow: hidden;
+      border: 1px solid white;
+      padding: 2px;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 90%;
+      transform: translate(-50%,-50%);
+      background-color: white;
+    }
+
+    .pic img{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .back-top{
+      background: url(images/bg-pattern-card.svg);
+      height: 130px;
+      position: relative;
+    }
+
+    .bottom{
+      border-top: 1px solid rgba(128, 128, 128, 0.549);
+      display: flex;
+      gap: 10px;
+      justify-content: space-evenly;
+      padding: 21px 20px;
+    }
+
+    .score1 p,
+    .score2 p,
+    .score3 p{
+      color: rgba(128, 128, 128, 0.686);
+      font-size: 12px;
+      width: 3rem;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+
+    .score1 h2,
+    .score2 h2,
+    .score3 h2{
+      font-size: 1.1rem;
+      width: 3rem;
+      text-align: center;
+    }
+
+    #num26{
+      display: inline;
+      color: rgba(128, 128, 128, 0.662);
+    }
+
+    @media (max-width: 768px) {
+      .container > img:first-child{
+      position: absolute;
+      left: -45rem;
+      top: -35rem;
+    }
+    .container{
+      height: 100vh;
+    }
+
+    .container > img:nth-last-child(1){
+      position: absolute;
+      right: -40rem;
+      bottom: -37rem;
+    }
+    
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="images/bg-pattern-top.svg"/>
+    <div class="profile">
+      <div class="back-top">
+        <div class="pic">
+          <img src="img.jpg" alt="">
+        </div>
+      </div>
+      <div class="center">
+        <h3 class="name">Kalyanasundaram <pre id="num26"> 26</pre></h3>
+        <p>Mayiladuthurai</p>
+      </div>
+      <div class="bottom">
+        <div class="score1">
+          <h2>80K</h2>
+          <p>Followers</p>
+        </div>
+
+        <div class="score2">
+          <h2>803K</h2>
+          <p>Likes</p>
+        </div>
+
+        <div class="score3">
+          <h2>1.4K</h2>
+          <p>photos</p>
+        </div>
+      </div>
+    </div>
+    <img src="images/bg-pattern-bottom.svg"/>
+  </div>
+</body>
+</html>
